@@ -1,8 +1,8 @@
 # SQL
 SQL Portfolio
 
-#Welcome to my SQL Portfolio. Here, you will find files containing queries that I have created. 
-#The database code and data are included, and the queries run error free.
+Welcome to my SQL Portfolio. Here, you will find files containing queries that I have created. 
+The database code and data are included, and the queries run error free.
 #Following is a list of my portfolio files and content outline:
 #1. Superstore Database
 #Use a SELECT statement to order items by price.
