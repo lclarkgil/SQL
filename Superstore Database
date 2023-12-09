@@ -1,3 +1,5 @@
+#The following code was used to perform the SQL queries furthe below.
+
 CREATE TABLE superstore (
     item_id INTEGER PRIMARY KEY,
     item_name TEXT,
@@ -24,3 +26,44 @@ VALUES
     (13, 'Slow Cooker', 'Appliances', 49.95, 30, 4.7),
     (14, 'Cutlery Set', 'Kitchen Supplies', 34.50, 40, 4.4),
     (15, 'Cozy Throw Blanket', 'Furnishings', 24.99, 100, 4.2);
+
+
+#Use a SELECT statement to order items by price.
+SELECT *
+FROM superstore
+ORDER BY price;
+
+#Write query showing a statistic about item prices.
+SELECT AVG(price)
+FROM superstore;
+
+#Write query showing a statistic about item prices in "Kitchen Supplies" category.
+SELECT MAX(price), category
+FROM superstore
+WHERE category="Kitchen Supplies";
+
+#Come up with a question about the data and answer it with SQL:
+#What is the maximum price per category?
+SELECT MAX(price), category
+FROM superstore
+GROUP BY category;
+
+#Additional queries
+#Show stock level for items in Appliances category.
+SELECT stock_quantity, item_name, category
+FROM superstore
+WHERE category="Appliances";
+
+#Show the item and category that has the highest average rating.
+SELECT MAX(average_rating), item_name, category
+FROM superstore;
+
+#Show items with lowest average ratings, and group by category.
+SELECT MIN(average_rating), item_name, category
+FROM superstore
+GROUP BY(category);
+
+#Show items with highest average ratings by category.
+SELECT max(average_rating), item_name, category
+FROM superstore
+GROUP BY(category);
