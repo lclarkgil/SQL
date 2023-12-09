@@ -1,4 +1,4 @@
-#The following code was used to perform the SQL queries furthe below.
+#The following code was used to perform the SQL queries further below.
 
 CREATE TABLE superstore (
     item_id INTEGER PRIMARY KEY,
